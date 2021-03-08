@@ -15,7 +15,7 @@ lazy_static! {
 
 
 pub async fn get_collection() -> anyhow::Result<Collection> {
-    let mut client_options = ClientOptions::parse("mongodb://39.96.40.177:27017/").await?;
+    let mut client_options = ClientOptions::parse("mongodb://127.0.0.1:27017/").await?;
     client_options.app_name = Some("reverse".to_string());
     let client = Client::with_options(client_options)?;
     let db = client.database("config");
