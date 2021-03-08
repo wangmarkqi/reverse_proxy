@@ -1,0 +1,20 @@
+[package]
+name = "reverse_proxy"
+version = "0.1.0"
+authors = ["wangmarkqi <wangalexqi@126.com>"]
+edition = "2018"
+
+
+[dependencies]
+futures = "0.3.13"
+async-std = "1.9.0"
+anyhow = "1.0.38"
+lazy_static = "1.4.0"
+unicase = "2.6.0"
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+
+[dependencies.mongodb]
+version = "1.2.0"
+default-features = false
+features = ["async-std-runtime"]
